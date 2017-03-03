@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background-image: linear-gradient(to bottom right, orchid, indigo);
+  perspective: 800px;
+  padding-top: 2%;
+  height: 100%;
+  background-attachment: fixed; }
+
+h1 {
+  text-align: center;
+  text-shadow: 1px 1px violet;
+  font-family: 'Raleway', sans-serif; }
+
+/*Calculator Body Styles*/
+#wrapper {
+  width: 320px;
+  margin: 0 auto;
+  height: auto;
+  background-image: radial-gradient(at top left, white, lightgrey 30%, dimgray 90%);
+  padding: 1%;
+  border-radius: 5%;
+  box-shadow: 5px 5px 2px black;
+  transform: rotatex(25deg);
+  transition: transform 600ms; }
+
+#wrapper:hover {
+  transform: rotatex(5deg);
+  transform: rotatey(2.5deg);
+  background-image: radial-gradient(at top left, darkgrey, grey); }
+
+/*Wrapper for screen and buttons*/
+#touchpad {
+  margin-top: 10%;
+  background-image: radial-gradient(at top left, white, darkslategrey 50%, white 120%);
+  border: 1px solid darkslategrey;
+  border-radius: 10%;
+  padding: 24px 16px 16px 16px; }
+
+/*  Row styles and clearfix*/
+.row {
+  padding: 0px;
+  margin: 0px;
+  font-size: 1.25em; }
+
+.row::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+/*Number Styles and Grid, */
+.button {
+  display: block;
+  float: left;
+  width: 23.8%;
+  margin: 1% 0 1% 1.6%;
+  border: 1px solid black;
+  text-align: center;
+  box-shadow: 2px 6px 2px #333;
+  border-radius: 10%;
+  background-image: radial-gradient(at top left, lightgrey, grey, #333333);
+  color: white;
+  text-shadow: 2px 2px black;
+  cursor: pointer;
+  transition: box-shadow 400ms;
+  transform: rotatex(20deg); }
+
+#clearAll, #equals {
+  width: 49.2%; }
+
+.row .operator {
+  background-image: radial-gradient(at top left, lightgreen, seagreen, #333333); }
+
+.button:active, .button:focus {
+  box-shadow: 2px 2px 2px goldenrod;
+  transform: rotatex(0deg); }
+
+.button:active {
+  background: #555; }
+
+.row .operator:active {
+  background: #1D5736; }
+
+.button:first-child {
+  margin-left: 0; }
+
+/*Screen Styles*/
+#screen {
+  background-image: linear-gradient(to bottom right, white, lightcyan, cornflowerblue);
+  width: 95%;
+  height: 50px;
+  border: 2px solid black;
+  margin: 0 auto 5% auto;
+  box-shadow: inset 5px 5px 5px #333;
+  /*font styles for screen*/
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  text-align: right;
+  line-height: 50px;
+  font-size: 2em;
+  padding: 2px; }
